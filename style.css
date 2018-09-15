@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: normal 12px 'Open Sans', sans-serif;
+    line-height: 16px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 1360px;
+    height: 100vh;
+    min-height: 700px;
+}
+
+.main-wrapper {
+    width: 1360px;
+    height: 700px;
+    padding: 40px 112px;
+}
+
+.background {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 1360px;
+    height: 700px;
+    z-index: -1;
+    position: absolute;
+    top: calc((100% - 700px) / 2);
+    left: calc((100% - 1360px) / 2);
+}
+
+.bg {
+    width: 300px;
+    background-repeat: no-repeat;
+}
+
+.bg-left {
+    background-image: url("img/bg_left.png");
+    background-position: left;
+    height: 368px;
+}
+
+.bg-right {
+    background-image: url("img/bg_right.png");
+    background-position: right;
+    height: 386px;
+}
+
+.logo {
+    width: 179px;
+    height: 29px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.logo span {
+    font: bold 26px 'Ubuntu', sans-serif;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+.logo-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 129px;
+    height: 16px;
+    background: #FFBA45;
+    z-index: -1;
+}
+
+.stage-menu {
+    width: 264px;
+}
+
+.stage-heading {
+    position: relative;
+    height: 52px;
+    width: 187px;
+    margin-left: 85px;
+    margin-bottom: 15px;
+}
+
+.stage-heading h2 {
+    font: bold 18px 'Ubuntu', sans-serif;
+    margin: 0;
+    padding-left: 12px;
+}
+
+.stage-number {
+    font: bold 69px 'Ubuntu', sans-serif;
+    color: #DACFE2;
+    position: absolute;
+    z-index: -1;
+    top: -25px;
+    left: 0;
+}
+
+.stage {
+    padding: 0 50px;
+}
+
+#preparation-stage-tab, #development-stage-tab {
+    width: 264px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+#preparation-stage-tab a, #development-stage-tab a {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 1px;
+    width: 217px;
+    height: 36px;
+    padding: 0;
+    line-height: 36px;
+    border-left: 2px solid #ECE6F0;
+    border-radius: 0;
+    padding-left: 55px;
+}
+
+#development-stage-tab a {
+    width: 243px;
+}
+
+#preparation-stage-tab a[aria-selected="true"], #development-stage-tab a[aria-selected="true"] {
+    width: 264px;
+    color: #682593;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
+    background: white;
+    position: relative;
+    padding: 0;
+    border: none;
+}
+
+#preparation-stage-tab a[aria-selected="true"]::before, #development-stage-tab a[aria-selected="true"]::before {
+    content: '';
+    width: 22px;
+    height: 8px;
+    background-image: url("img/arrow.png");
+    position: absolute;
+    left: 21px;
+    top: 15px;
+}
+
+#development-stage-tab a[aria-selected="true"]::before {
+    left: 15px;
+}
+
+.tab-content {
+    display: flex;
+}
+
+.description-content {
+    width: 273px;
+    display: flex;
+}
+
+.stage-icon {
+    min-width: 60px;
+}
+
+.stage-icon img {
+    margin-top: 40px;
+}
+
+.description-text span, .stage-services span {
+    font: bold 12px 'Ubuntu', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.description-text p {
+    margin-top: 20px;
+}
+
+.stage-services {
+    margin-left: 30px;
+}
+
+.services-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 150px;
+    width: 430px;
+    margin-top: 20px;
+}
+
+.service {
+    width: 213px;
+    height: 50px;
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.service-marker {
+    min-width: 8px;
+    height: 8px;
+    background: #45076E;
+    margin: 5px 8px 0 0;
+}
+
+.preparation {
+    border-bottom: 2px solid #ECE6F0;
+    padding-bottom: 55px;
+}
+
+.development {
+    margin-top: 50px;
+}
